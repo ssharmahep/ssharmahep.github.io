@@ -1,99 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name | Theoretical Physicist</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Shubham Sharma | Academic Portfolio</title>
+  <meta name="description" content="Academic portfolio of Dr. Shubham Sharma. Postdoc at MIPT. Research: QCD, TMDs, GPDs, SPD/NICA, Russia.">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Accessible ARIA roles and better contrast, improved nav for keyboard -->
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f9f9f9; color: #333;
-    }
-    header {
-      background: #003366; color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #eee; padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px; text-decoration: none;
-      color: #003366; font-weight: bold;
-    }
-    main {
-      max-width: 800px; margin: auto;
-      padding: 20px;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    h2 {
-      color: #003366;
-    }
-    footer {
-      background: #003366; color: white;
-      text-align: center;
-      padding: 10px;
-    }
+    html { scroll-behavior: smooth; }
+    :focus { outline: 2px solid #3182ce; outline-offset: 2px; }
   </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900 font-sans">
 
-<header>
-  <h1>Your Name</h1>
-  <p>Postdoctoral Researcher in Theoretical Physics | MIPT & JINR</p>
-</header>
+  <!-- Header with ARIA and proper landmarks -->
+  <header class="bg-white shadow fixed w-full top-0 left-0 z-50" role="banner">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-xl sm:text-2xl font-bold text-gray-800">Dr. Shubham Sharma</h1>
+      <nav aria-label="Primary Navigation" class="hidden md:flex space-x-6">
+        <a href="#about" class="text-gray-700 hover:text-blue-600 focus:text-blue-600">About</a>
+        <a href="#research" class="text-gray-700 hover:text-blue-600 focus:text-blue-600">Research</a>
+        <a href="#publications" class="text-gray-700 hover:text-blue-600 focus:text-blue-600">Publications</a>
+        <a href="#events" class="text-gray-700 hover:text-blue-600 focus:text-blue-600">Conferences</a>
+        <a href="#news" class="text-gray-700 hover:text-blue-600 focus:text-blue-600">News</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 focus:text-blue-600">Contact</a>
+      </nav>
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100 py-2 px-6 space-y-2" aria-label="Mobile Navigation">
+      <a href="#about" class="block text-gray-700 hover:text-blue-600">About</a>
+      <a href="#research" class="block text-gray-700 hover:text-blue-600">Research</a>
+      <a href="#projects" class="block text-gray-700 hover:text-blue-600">Projects</a>
+      <a href="#conferences" class="block text-gray-700 hover:text-blue-600">Conferences</a>
+      <a href="#news" class="block text-gray-700 hover:text-blue-600">News</a>
+      <a href="#publications" class="block text-gray-700 hover:text-blue-600">Publications</a>
+      <a href="#contact" class="block text-gray-700 hover:text-blue-600">Contact</a>
+    </nav>
+    <script>
+      document.getElementById('mobile-menu-btn').onclick = function() {
+        var menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      }
+    </script>
+  </header>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#research">Research</a>
-  <a href="#publications">Publications</a>
-  <a href="#talks">Talks</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <main class="max-w-5xl mx-auto pt-24 px-4 sm:px-6 lg:px-8" role="main">
+    <!-- About Section -->
+    <section id="about" class="my-12" aria-labelledby="about-heading">
+  <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+    <img src="profile.jpg" alt="Dr. Shubham Sharma" class="w-40 h-40 rounded-full shadow border-2 border-blue-100" />
+    <div>
+      <h2 id="about-heading" class="text-2xl font-bold mb-4">About Me</h2>
+      <p>
+        Young Scientist (Postdoctoral Researcher) in High Energy Physics at <span class="font-semibold">Moscow Institute of Physics and Technology (MIPT)</span>, with a focus on Hadron structure and SPD/NICA physics.
+      </p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        <a href="cv.pdf" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition" target="_blank" rel="noopener">
+          Download CV
+        </a>
+        <span class="text-gray-500 text-xs ml-2">Last updated: August 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-<main>
-  <section id="home">
-    <h2>About Me</h2>
-    <p>I�m a postdoctoral researcher working on quarkonium production at SPD/NICA, with a focus on TMDs, higher-twist effects, and partonic subprocesses. My tools include PEGASUS and FeynCalc.</p>
-    <p>You can download my <a href="cv.pdf">CV</a> or email me at: <strong>your.email@domain.com</strong></p>
-  </section>
+<section id="timeline" class="my-12" aria-labelledby="timeline-heading">
+  <h2 id="timeline-heading" class="text-2xl font-bold mb-4">Professional Experience</h2>
+  <ul class="border-l-2 border-blue-300 pl-6 space-y-6">
+    <li>
+      <span class="text-sm text-gray-500">2025 – Present</span><br>
+      <span class="font-semibold">Postdoctoral Researcher</span>, Moscow Institute of Physics and Technology (MIPT), Moscow, Russia
+    </li>
+    <li>
+      <span class="text-sm text-gray-500">2022 – 2024</span><br>
+      <span class="font-semibold">Senior Research Fellow (Ph.D.)</span>, NIT Jalandhar, Punjab, India
+    </li>
+    <li>
+      <span class="text-sm text-gray-500">2019 – 2022</span><br>
+      <span class="font-semibold">Junior Research Fellow (Ph.D.)</span>, NIT Jalandhar, Punjab, India
+    </li>
+        <li>
+     <span class="text-sm text-gray-500">2019 – 2024</span><br>
+     <span class="font-semibold">Teaching Assistant</span>, NIT Jalandhar, Punjab, India<br>
+     <span class="text-gray-700 text-sm">
+    Assisted in B.Tech. theory tutorials and laboratory courses, as well as M.Sc. laboratory sessions.
+     </span>
+   </li>
+   <li>
+  <span class="text-sm text-gray-500">July 2019 – February 2021</span><br>
+  <span class="font-semibold">Head of Design Committee</span>, Physical Science Society, Department of Physics,  NIT Jalandhar, Punjab, India
+  </li>
+    <li>
+      <span class="text-sm text-gray-500">2018 – 2019</span><br>
+      <span class="font-semibold">Junior Research Project Fellow</span>, SERB-DST Project “Semi-leptonic Radiative & Non-leptonic Rare B Decays in the Light-Front Quark Model,” NIT Jalandhar, Punjab, India
+    </li>
+  </ul>
+</section>
 
-  <section id="research">
-    <h2>Research</h2>
-    <p><strong>Quarkonium Production at SPD:</strong> Analyzing J/? production at vs � 27 GeV using TMD factorization and event-level data from PEGASUS.</p>
-    <p><strong>GTMDs and Higher-Twist Effects:</strong> Investigating gluon distributions in hadrons and their relevance to spin structure and orbital angular momentum.</p>
-  </section>
+<section id="research" class="my-12" aria-labelledby="research-heading">
+  <h2 id="research-heading" class="text-2xl font-bold mb-4">Research Interests</h2>
+  <ul class="list-disc pl-6 space-y-2">
+    <li>Quarkonia production at intermediate energies (SPD/NICA)</li>
+    <li>Hadron structure and higher-twist partonic distributions: PDFs, GPDs, TMDs, GTMDs
+    <li>Light-front models for non-perturbative QCD</li>
+    <li>Advanced computational physics: Python, Mathematica, LaTeX, C++, Fortran </li>
+  </ul>
+</section>
 
-  <section id="publications">
-    <h2>Publications</h2>
-    <ul>
-      <li>Author A, Your Name, �Title,� <em>Phys. Rev. D</em>, [arXiv:xxxx.xxxxx]</li>
-      <li>�Quarkonia as probes at SPD� � Accepted abstract at Nucleus 2025</li>
-    </ul>
-  </section>
 
-  <section id="talks">
-    <h2>Talks & Conferences</h2>
-    <ul>
-      <li>Nucleus 2025 � Poster on J/? production</li>
-      <li>Winter School on QCD 2025 � Attendee</li>
-    </ul>
-  </section>
+    <!-- Publications Section -->
+    <section id="publications" class="my-12" aria-labelledby="publications-heading">
+  <h2 id="publications-heading" class="text-2xl font-bold mb-4">Selected Publications</h2>
+  <ul class="space-y-5 pl-2">
+    <li>
+      <span class="block font-semibold">
+        S. Puhan, S. Sharma, N. Kumar, H. Dahiya,  
+        "Valence quark distribution of rho meson using light-front quark model"
+      </span>
+      [<a href="https://arxiv.org/abs/2511.10981" class="text-blue-700 underline" target="_blank">arXiv:2511.10981</a>]
+    </li>
+    <li>
+      <span class="block font-semibold">
+        S. Sharma, A. Aparin,  
+        "Probing J/ψ Production Mechanisms in Proton-Proton Collisions at SPD/NICA Energies"
+      </span>
+      [<a href="https://arxiv.org/abs/2511.03477" class="text-blue-700 underline" target="_blank">arXiv:2511.03477</a>]
+    </li>
+    <li>
+      <span class="block font-semibold">
+        S. Puhan, S. Sharma, N. Kumar, H. Dahiya,  
+        "Understanding the Valence Quark Structure of the Pion through GTMDs"
+      </span>
+      Prog. Theor. Exp. Phys. (2025), <a href="https://doi.org/10.1093/ptep/ptaf100" target="_blank" class="text-blue-700 underline">doi:10.1093/ptep/ptaf100</a>
+      [<a href="https://arxiv.org/abs/2504.14982" class="text-blue-700 underline" target="_blank">arXiv:2504.14982</a>]
+    </li>
+    <li>
+      <span class="block font-semibold">
+        S. Jain, S. Sharma, H. Dahiya,  
+        "Deciphering twist-3 chiral-even GPDs in the light-front quark-diquark model"
+      </span>
+      Phys. Rev. D 110 (9), 094030 (2024), 
+      <a href="https://doi.org/10.1103/PhysRevD.110.094030" target="_blank" class="text-blue-700 underline">doi:10.1103/PhysRevD.110.094030</a>
+      [<a href="https://arxiv.org/abs/2408.07332" class="text-blue-700 underline" target="_blank">arXiv:2408.07332</a>]
+    </li>
+    <li>
+      <span class="block font-semibold">
+        S. Sharma, S. Jain, H. Dahiya,  
+        "Unraveling subleading twist GTMDs of proton using light-front quark-diquark model"
+      </span>
+      Phys. Rev. D 110 (7), 074025 (2024), 
+      <a href="https://doi.org/10.1103/PhysRevD.110.074025" target="_blank" class="text-blue-700 underline">doi:10.1103/PhysRevD.110.074025</a>
+      [<a href="https://arxiv.org/abs/2408.07716" class="text-blue-700 underline" target="_blank">arXiv:2408.07716</a>]
+    </li>
+    <li>
+      <span class="block font-semibold">
+        S. Sharma, S. Puhan, N. Kumar, H. Dahiya,  
+        "TMD Relations: Insights from a Light-Front Quark–Diquark Model"
+      </span>
+      PTEP 2024 (10), 103B05 (2024), 
+      <a href="https://doi.org/10.1093/ptep/ptae150" target="_blank" class="text-blue-700 underline">doi:10.1093/ptep/ptae150</a>
+      [<a href="https://arxiv.org/abs/2405.13727" class="text-blue-700 underline" target="_blank">arXiv:2405.13727</a>]
+    </li>
+    <li>
+      <span class="block font-semibold">
+        S. Sharma, H. Dahiya,  
+        "Exploring twist-4 chiral-even GPDs in the light-front quark-diquark model"
+      </span>
+      Nucl. Phys. B 1001, 116522 (2024), 
+      <a href="https://doi.org/10.1016/j.nuclphysb.2024.116522" target="_blank" class="text-blue-700 underline">doi:10.1016/j.nuclphysb.2024.116522</a>
+      [<a href="https://arxiv.org/abs/2310.03463" class="text-blue-700 underline" target="_blank">arXiv:2310.03463</a>]
+    </li>
+    <li>
+      <span class="block font-semibold">
+        S. Puhan, S. Sharma, N. Kaur, N. Kumar, H. Dahiya,  
+        "T-even TMDs for the spin-0 pseudo-scalar mesons upto twist-4 using light-front formalism"
+      </span>
+      JHEP 02, 075 (2024), 
+      <a href="https://doi.org/10.1007/JHEP02(2024)075" target="_blank" class="text-blue-700 underline">doi:10.1007/JHEP02(2024)075</a>
+      [<a href="https://arxiv.org/abs/2310.03464" class="text-blue-700 underline" target="_blank">arXiv:2310.03464</a>]
+    </li>
+    <li>
+      <span class="block font-semibold">
+        S. Sharma, H. Dahiya,  
+        "Twist-4 proton GTMDs in the light-front quark–diquark model"
+      </span>
+      Eur. Phys. J. A 59 (10), 235 (2023), 
+      <a href="https://doi.org/10.1140/epja/s10050-023-01156-8" target="_blank" class="text-blue-700 underline">doi:10.1140/epja/s10050-023-01156-8</a>
+      [<a href="https://arxiv.org/abs/2310.03592" class="text-blue-700 underline" target="_blank">arXiv:2310.03592</a>]
+    </li>
+    <li>
+      <span class="block font-semibold">
+        S. Sharma, N. Kumar, H. Dahiya,  
+        "Sub-leading twist transverse momentum dependent parton distributions in the light-front quark-diquark model"
+      </span>
+      Nucl. Phys. B 992, 116247 (2023), 
+      <a href="https://doi.org/10.1016/j.nuclphysb.2023.116247" target="_blank" class="text-blue-700 underline">doi:10.1016/j.nuclphysb.2023.116247</a>
+      [<a href="https://arxiv.org/abs/2302.07165" class="text-blue-700 underline" target="_blank">arXiv:2302.07165</a>]
+    </li>
+    <li>
+      <span class="block font-semibold">
+        S. Sharma, H. Dahiya,  
+        "Twist-4 T-even proton TMDs in the light-front quark-diquark model"
+      </span>
+      Int. J. Mod. Phys. A 37 (34), 2250205 (2022), 
+      <a href="https://doi.org/10.1142/S0217751X22502050" target="_blank" class="text-blue-700 underline">doi:10.1142/S0217751X22502050</a>
+      [<a href="https://arxiv.org/abs/2301.09536" class="text-blue-700 underline" target="_blank">arXiv:2301.09536</a>]
+    </li>
+  </ul>
+  <p class="mt-4">
+    <a href="https://inspirehep.net/authors/1896590?ui-citation-summary=true" class="text-blue-600 underline" target="_blank" rel="noopener">
+      View complete publication list on Inspire-HEP →
+    </a>
+  </p>
+</section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your.email@domain.com</p>
-    <p><a href="https://scholar.google.com">Google Scholar</a> | <a href="https://linkedin.com">LinkedIn</a> | <a href="https://orcid.org">ORCID</a></p>
-  </section>
-</main>
+    <!-- Conferences Section -->
+    
+    <section id="events" class="my-12" aria-labelledby="events-heading">
+  <h2 id="events-heading" class="text-2xl font-bold mb-4"> Selected Conferences, Workshops & Schools</h2>
+  <ul class="border-l-2 border-blue-300 pl-6 space-y-6">
+        <li>
+      <span class="text-sm text-gray-500">Sept 15 – Sept 20, 2025</span><br>
+      <span class="font-semibold">XXVIth International
+Baldin Seminar on High Energy Physics Problems it</span>, Dubna, Russia — Participated and Presented work
+    </li>
+      <li>
+      <span class="text-sm text-gray-500">July 1 – July 6, 2025</span><br>
+      <span class="font-semibold">Nucleus 2025 (Ядро)</span>, Saint Petersburg, Russia — Participated and Presented work
+    </li>
+    <li>
+      <span class="text-sm text-gray-500">May 28 – June 15, 2024</span><br>
+      <span class="font-semibold">39th Annual Hampton University Graduate Studies (HUGS 2024) Program</span>, Jefferson Lab, USA — Participated and Presented work
+    </li>
+    <li>
+      <span class="text-sm text-gray-500">Jan 28 – Feb 9, 2024</span><br>
+      <span class="font-semibold">International School and Workshop on Probing Hadron Structure at the Electron-Ion Collider</span>, ICTS-TIFR, Bengaluru, India — Participated and Presented work
+    </li>
+    <li>
+      <span class="text-sm text-gray-500">Dec 11 – 15, 2023</span><br>
+      <span class="font-semibold">International School for Strangeness Nuclear Physics 2023</span>, Tohoku University, Japan — Participated and Presented work online
+    </li>
+    <li>
+      <span class="text-sm text-gray-500">Oct 16 – 19, 2023</span><br>
+      <span class="font-semibold">India-JINR Workshop on Elementary Particle and Nuclear Physics, and Condensed Matter Research</span>, Joint Institute for Nuclear Research, Dubna, Russia — Participated and Presented work
+    </li>
+    <li>
+      <span class="text-sm text-gray-500">June 5 – 16, 2023</span><br>
+      <span class="font-semibold">2023 CFNS Summer School on the Physics of the Electron-Ion Collider</span>, Stony Brook University, NY, USA — Participated and Presented work
+    </li>
+    <li>
+      <span class="text-sm text-gray-500">May 12, 2023</span><br>
+      <span class="font-semibold">8th HEPCATS Meeting</span>, NIT Jalandhar, Punjab, India — Participated and Presented work
+    </li>
+    <li>
+      <span class="text-sm text-gray-500">Feb 28, 2023</span><br>
+      <span class="font-semibold">National Science Day</span>, NIT Jalandhar, Punjab, India — Received best poster award
+    </li>
+    <li>
+      <span class="text-sm text-gray-500">Jan 16 – 20, 2023</span><br>
+      <span class="font-semibold">DAE-BRNS Workshop on Hadron Physics 2023</span>, NIT Jalandhar, Punjab, India — Participated and Presented work
+    </li>
+    <li>
+      <span class="text-sm text-gray-500">Dec 12 – 16, 2022</span><br>
+      <span class="font-semibold">XXV DAE-BRNS HEP Symposium 2022</span>, IISER Mohali, Punjab, India — Presented a poster
+    </li>
+    <li>
+      <span class="text-sm text-gray-500">Sep 18 – 22, 2020</span><br>
+      <span class="font-semibold">TEQIP-III Advances in High Energy Physics Course</span>, NIT Jalandhar, Punjab, India — Participated
+    </li>
+    <li>
+      <span class="text-sm text-gray-500">Dec 1 – 10, 2019</span><br>
+      <span class="font-semibold">XVI Workshop on High Energy Physics Phenomenology (WHEPP 2019)</span>, IIT Guwahati, Assam, India — Participated
+    </li>
+    <li>
+      <span class="text-sm text-gray-500">July 15 – 19, 2019</span><br>
+      <span class="font-semibold">TEQIP-III Emerging Fields in High Energy Physics Course</span>, NIT Jalandhar, Punjab, India — Participated
+    </li>
+  </ul>
+    <p class="mt-2 text-xs text-gray-500">
+    <a href="YOUR_FULL_LIST_LINK" target="_blank" class="text-blue-600 underline">View complete list (PDF)</a>
+  </p>
+</section>
 
-<footer>
-  <p>� 2025 Your Name | Last updated May 2025</p>
-</footer>
 
+<!--<section id="conferences" class="my-12" aria-labelledby="conferences-heading">-->
+<!--  <h2 id="conferences-heading" class="text-2xl font-bold mb-4">Selected Conferences & Workshops</h2>-->
+<!--  <ul class="list-disc pl-6 space-y-2">-->
+<!--    <li>Invited Talk: Spin Physics Symposium, NICA-JINR, Dubna, 2025</li>-->
+<!--    <li>International: QCD@Work, Bari, Italy, 2024</li>-->
+<!--    <li>Workshop Presentation: TMD Workshop, DESY, Hamburg, 2023</li>-->
+    <!-- Add other major events; keep the list short (3-6) -->
+<!--  </ul>-->
+<!--  <p class="mt-2 text-xs text-gray-500">-->
+<!--    <a href="YOUR_FULL_LIST_LINK" target="_blank" class="text-blue-600 underline">View complete list (PDF)</a>-->
+<!--  </p>-->
+<!--</section>-->
+
+<!--        <li>-->
+<!--      <span class="text-sm text-gray-500">Sept 15 – Sept 20, 2025</span><br>-->
+<!--      <span class="font-semibold">XXVIth International-->
+<!--Baldin Seminar on High Energy Physics Problems it</span>, Dubna, Russia — Participated and Presented work-->
+<!--    </li>-->
+    
+
+    <!-- News Section -->
+<section id="news" class="my-12" aria-labelledby="news-heading">
+  <h2 id="news-heading" class="text-2xl font-bold mb-4">News & Updates</h2>
+  <ul class="space-y-3">
+    <li>
+      <span class="font-semibold">[14-11-2025]</span> Preprint released: "Valence quark distribution of rho meson using light-front quark model" (<a href="https://arxiv.org/abs/2511.10981" class="underline text-blue-600" target="_blank">arXiv</a>)
+    </li>
+    <li>
+      <span class="font-semibold">[05-11-2025]</span> Preprint released: "Probing J/ψ Production Mechanisms in Proton-Proton Collisions at SPD/NICA Energies" (<a href="https://arxiv.org/abs/2511.03477" class="underline text-blue-600" target="_blank">arXiv</a>)
+    </li>
+    <li>
+      <span class="font-semibold">[20-09-2025]</span> Attended XXVIth International
+Baldin Seminar on High Energy Physics Problems (Dubna)—presented work on hadron structure.
+    </li>
+    <li>
+      <span class="font-semibold">[05-08-2025]</span> <a href="https://linkedin.com/in/ssharmahep/detail/recent-activity/shares/" class="underline text-blue-600" target="_blank" rel="noopener">See my recent LinkedIn post</a>
+    </li>
+    <!-- Any other news: new paper, grant, media -->
+  </ul>
+  <p class="mt-2 text-xs text-gray-500">Academic updates, blog entries, or personal milestones. For more detail, connect via LinkedIn or email.</p>
+</section>
+
+    <!-- Contact -->
+    <section id="contact" class="my-12" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="text-2xl font-bold mb-4">Contact</h2>
+      <p>Email: <a href="mailto:s.sharma.hep@gmail.com" class="text-blue-600 hover:underline">s.sharma.hep@gmail.com</a></p>
+      <div class="mt-2 flex flex-wrap items-center gap-4">
+        <a href="https://inspirehep.net/authors/1896590" class="text-blue-600 hover:underline" target="_blank" rel="noopener">Inspire-HEP</a>
+        <a href="https://linkedin.com/in/ssharmahep" class="text-blue-600 hover:underline" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://orcid.org/0000-0002-3047-4333" class="text-blue-600 hover:underline" target="_blank" rel="noopener">ORCID</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-100 text-center py-4 mt-12 text-sm text-gray-600" role="contentinfo">
+    © 2025 Dr. Shubham Sharma | Last updated: August 2025
+  </footer>
 </body>
 </html>
